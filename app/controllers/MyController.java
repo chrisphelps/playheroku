@@ -8,6 +8,7 @@ import models.Foo;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.foo;
+import views.html.foolist;
 
 import play.data.Form;
 import play.db.ebean.Model;
@@ -23,6 +24,12 @@ public class MyController extends Controller {
 	}
 	
 	public static Result getFoos() {
+		List<Foo> foos = Foo.find.all();
+		
+		return ok(foolist.render(foos));
+	}
+	
+	public static Result getFoosJson() {
 //		Foo foo = new Foo();
 //		foo.id = "1";
 //		foo.name = "foo";

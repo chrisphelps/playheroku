@@ -10,7 +10,8 @@ GET		/my							controllers.MyController.foo()
 GET		/foo						controllers.MyController.foo()
 GET		/my/:foo					controllers.MyController.foo2(foo)
 
-GET		/foos.json					controllers.MyController.getFoos()
+GET 	/foos						controllers.MyController.getFoos()
+GET		/foos.json					controllers.MyController.getFoosJson()
 POST	/addfoo						controllers.MyController.addFoo()
 
 # Map static resources from the /public folder to the /assets URL path

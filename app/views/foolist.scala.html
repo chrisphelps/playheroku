@@ -1,0 +1,15 @@
+@(foos: List[Foo])
+ 
+<html>
+<body>
+
+<ul> 
+@for(foo <- foos) {
+  <li>@foo.getName()</li>
+} 
+</ul>
+
+<a href="my">Add a Foo</a>
+
+</body>
+</html>
