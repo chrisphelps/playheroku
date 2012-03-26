@@ -30,16 +30,9 @@ public class MyController extends Controller {
 	}
 	
 	public static Result getFoosJson() {
-//		Foo foo = new Foo();
-//		foo.id = "1";
-//		foo.name = "foo";
-//		
-//		List<Foo> foos = new ArrayList<Foo>();
-//		foos.add(foo);
-		
 		List<Foo> foos = Foo.find.all();
 		
-		return ok(Json.toJson(foos));  //Json utils package
+		return ok(Json.toJson(foos)).as("application/json");  //Json utils package
 	}
 	
 	public static Result addFoo() {
